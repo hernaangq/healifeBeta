@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HealifeBeta">
         <activity
+            android:name=".MyDietsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GroceriesActivity"
+            android:exported="false" />
+        <activity
             android:name=".WeeklyDietActivity"
             android:exported="false" />
         <activity

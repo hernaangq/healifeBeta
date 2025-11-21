@@ -176,11 +176,82 @@ fun MainMenuScreen(modifier: Modifier = Modifier) {
                         )
                     }
                 }
-// ^^^^^ END UPDATED CODE ^^^^^
+            // ^^^^^ END UPDATED CODE ^^^^^
 
-// ... Groceries Button ...
+            // ... Groceries Button ...
+                Button(
+                    onClick = {
+                        val intent = Intent(context, GroceriesActivity::class.java)
+                        context.startActivity(intent)
+                    },
+                    modifier = Modifier
+                        .align(Alignment.Start)
+                        .width(240.dp)
+                        .height(100.dp),
+                    shape = RoundedCornerShape(20.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFD8F3DC)),
+                    elevation = ButtonDefaults.buttonElevation(defaultElevation = 6.dp),
+                    contentPadding = PaddingValues(16.dp)
+                ) {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.Start,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.ShoppingCart,
+                            contentDescription = null,
+                            tint = Color.Black,
+                            modifier = Modifier.size(32.dp)
+                        )
+                        Spacer(modifier = Modifier.width(24.dp))
+                        Text(
+                            text = "GROCERIES",
+                            color = Color.Black,
+                            fontSize = 16.sp,
+                            fontWeight = FontWeight.Bold,
+                            letterSpacing = 1.sp
+                        )
+                    }
+                }
 
-
+                // My Diets Button (Right aligned)
+                Button(
+                    onClick = {
+                        val intent = Intent(context, MyDietsActivity::class.java)
+                        context.startActivity(intent)
+                    },
+                    modifier = Modifier
+                        .align(Alignment.End)
+                        .offset(x = (-20).dp)
+                        .width(240.dp)
+                        .height(100.dp),
+                    shape = RoundedCornerShape(20.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFD8F3DC)),
+                    elevation = ButtonDefaults.buttonElevation(defaultElevation = 6.dp),
+                    contentPadding = PaddingValues(16.dp)
+                ) {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.Start,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.Face,
+                            contentDescription = null,
+                            tint = Color.Black,
+                            modifier = Modifier.size(32.dp)
+                        )
+                        Spacer(modifier = Modifier.width(24.dp))
+                        Text(
+                            text = "MY DIETS",
+                            color = Color.Black,
+                            fontSize = 16.sp,
+                            fontWeight = FontWeight.Bold,
+                            letterSpacing = 1.sp
+                        )
+                    }
+                }
 
             }
         }
