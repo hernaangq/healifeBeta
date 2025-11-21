@@ -131,15 +131,57 @@ fun MainMenuScreen(modifier: Modifier = Modifier) {
                 }
                 // ^^^^^ END UPDATED BUTTON ^^^^^
 
-                // ... Keep the other buttons (Weekly Diet, Groceries, My Diets) as they were ...
-                // Weekly Diet Button
-                MenuButton(
-                    text = "WEEKLY DIET",
-                    icon = Icons.Default.DateRange,
-                    modifier = Modifier.align(Alignment.End).offset(x = (-20).dp)
-                )
 
-                // ... etc
+                // ... Previous Profile Button code ...
+
+                // Weekly Diet Button (Right aligned)
+                // vvvvv UPDATED CODE vvvvv
+                Button(
+                    onClick = {
+                        val intent = Intent(context, WeeklyDietActivity::class.java)
+                        context.startActivity(intent)
+                    },
+                    modifier = Modifier
+                        .align(Alignment.End)
+                        .offset(x = (-20).dp)
+                        .width(240.dp)
+                        .height(100.dp),
+                    shape = RoundedCornerShape(20.dp),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color(0xFFD8F3DC)
+                    ),
+                    elevation = ButtonDefaults.buttonElevation(
+                        defaultElevation = 6.dp
+                    ),
+                    contentPadding = PaddingValues(16.dp)
+                ) {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.Start,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.DateRange,
+                            contentDescription = null,
+                            tint = Color.Black,
+                            modifier = Modifier.size(32.dp)
+                        )
+                        Spacer(modifier = Modifier.width(24.dp))
+                        Text(
+                            text = "WEEKLY DIET",
+                            color = Color.Black,
+                            fontSize = 16.sp,
+                            fontWeight = FontWeight.Bold,
+                            letterSpacing = 1.sp
+                        )
+                    }
+                }
+// ^^^^^ END UPDATED CODE ^^^^^
+
+// ... Groceries Button ...
+
+
+
             }
         }
     }
