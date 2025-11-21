@@ -103,7 +103,7 @@ fun ProfileScreen() {
             ) {
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
-                        text = "Hi John!",
+                        text = "Hi Luis!",
                         color = Color(0xFF2E8B57),
                         fontWeight = FontWeight.Bold,
                         fontSize = 18.sp
