@@ -13,7 +13,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Person
-import androidx.compose.material.icons.filled.Restaurant
 import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -130,7 +129,7 @@ fun DietPlanBottomBar() {
         verticalAlignment = Alignment.CenterVertically
     ) {
         // These icons are placeholders. For the actual app, you should use painterResource with your own assets.
-        Icon(imageVector = Icons.Default.Restaurant, contentDescription = "Diet", tint = Color.Gray, modifier = Modifier.size(40.dp))
+        Icon(imageVector = Icons.Default.Person, contentDescription = "Diet", tint = Color.Gray, modifier = Modifier.size(40.dp))
 
         Surface(
             shape = CircleShape,
